@@ -8,12 +8,18 @@ body {
   overflow: hidden;
 }
 
+.slideshow {
+  display: flex;
+  justify-content: center;
+}
+
 .buttons {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  width: 100vw;
   padding: 0 50px;
   top: 36vh;
-  position: relative;
 }
 
 .previous-btn,
@@ -56,4 +62,31 @@ img {
 
 .active {
   visibility: visible;
+}
+
+.radio-btn {
+  display: flex;
+  position: absolute;
+  gap: 50px;
+  top: 95vh;
+}
+
+input[type="radio"] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+input[type="radio"]:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+input[type="radio"]:checked {
+  background-color: white;
+  transform: scale(130%);
 }
